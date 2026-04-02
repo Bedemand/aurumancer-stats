@@ -1,0 +1,1 @@
+# aurumancer-stat-keeper
