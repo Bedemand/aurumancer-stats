@@ -559,13 +559,13 @@
 
   function closeMaxHpDialog(confirm) {
     if (confirm) {
-      const maxHp = parseInt(document.getElementById('dialog-input').value);
+      const newMaxHp = parseInt(document.getElementById('dialog-input').value);
 
-      if (!isNaN(maxHp) && maxHp > 0) {
-        stats.maxHp = maxHp;
-        document.getElementById('hp-max-label').textContent = `/ ${maxHp}`;
-        const diff = maxHp - stats.hp;
+      if (!isNaN(newMaxHp) && newMaxHp > 0) {
+        const diff = newMaxHp - stats.maxHp;
+        stats.maxHp = newMaxHp;
         changeStat('hp', diff);
+        document.getElementById('hp-max-label').textContent = `/ ${newMaxHp}`;
       }
     }
     document.getElementById('dialog-overlay').classList.remove('open');
