@@ -467,11 +467,15 @@
   }
 
   // Stats
+  const defaultHp = 8;
+  const defaultGold = 10;
+  const defaultPower = 0;
+
   const stats = {
-    hp: 12,
-    maxHp: 12,
-    power: 0,
-    gold: 12
+    hp: defaultHp,
+    maxHp: defaultHp,
+    power: defaultPower,
+    gold: defaultGold
   };
 
   const deltaStats = {
@@ -578,8 +582,8 @@
     deltaStats.hp.transitionBeginTime = 0;
     document.getElementById('hp-delta').style.opacity = 0;
 
-    stats.gold = 12;
-    getCurrentValueElement('gold').textContent = 12;
+    stats.gold = defaultGold;
+    getCurrentValueElement('gold').textContent = defaultGold;
     deltaStats.gold.value = 0;
     deltaStats.gold.transitionBeginTime = 0;
     document.getElementById('gold-delta').style.opacity = 0;
